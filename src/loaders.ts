@@ -49,7 +49,7 @@ export async function loadDocument(filename: string, data: Buffer): Promise<Load
   if (type === 'pdf') {
     sections = await loadPdfPages(data);
   } else {
-    const text = data.toString('utf8').replace(/^﻿/, '');
+    const text = data.toString('utf8').replace(/^\uFEFF/, '');
     sections = type === 'markdown' ? parseMarkdownSections(text) : text.trim() ? [{ text: text.trim() }] : [];
   }
   if (sections.length === 0) {
