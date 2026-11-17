@@ -1,4 +1,16 @@
+import { Agent, fetch as undiciFetch } from 'undici';
+
 export type FetchLike = typeof fetch;
+
+/**
+ * Node's built-in fetch gives up after 300 s without response headers. A CPU-only
+ * Ollama that is busy with other requests can queue ours for longer than that, so
+ * the default fetch uses an agent with those limits off; the AbortSignal timeout
+ * below (CHAT_TIMEOUT_MS / EMBED_TIMEOUT_MS) is the only deadline.
+ */
+const patientAgent = new Agent({ headersTimeout: 0, bodyTimeout: 0 });
+export const patientFetch: FetchLike = ((url: string, init?: RequestInit) =>
+  undiciFetch(url, { ...(init as object), dispatcher: patientAgent })) as unknown as FetchLike;
 
 export class HttpError extends Error {
   constructor(
@@ -64,7 +76,7 @@ export interface TimedRequest {
 export async function fetchWithTimeout(url: string, init: RequestInit, req: TimedRequest): Promise<Response> {
   const timeout = AbortSignal.timeout(req.timeoutMs);
   const signal = req.signal ? AbortSignal.any([timeout, req.signal]) : timeout;
-  const doFetch = req.fetchImpl ?? fetch;
+  const doFetch = req.fetchImpl ?? patientFetch;
   let res: Response;
   try {
     res = await doFetch(url, { ...init, signal });
