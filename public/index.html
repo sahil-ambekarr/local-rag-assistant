@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Local RAG Assistant</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <h1>Local RAG Assistant</h1>
+        <span id="status" class="status">connecting...</span>
+      </div>
+      <label class="model-picker">
+        Model
+        <select id="model" aria-label="Chat model"></select>
+      </label>
+    </header>
+
+    <main class="layout">
+      <aside class="panel documents">
+        <h2>Documents</h2>
+        <form id="upload-form" class="upload">
+          <input id="files" type="file" multiple accept=".md,.markdown,.txt,.pdf" aria-label="Choose documents" />
+          <button type="submit">Ingest</button>
+        </form>
+        <p id="upload-status" class="muted" role="status"></p>
+        <ul id="doc-list" class="doc-list"></ul>
+      </aside>
+
+      <section class="panel chat">
+        <form id="ask-form" class="ask">
+          <textarea id="question" rows="2" maxlength="2000" placeholder="Ask a question about your documents" aria-label="Question"></textarea>
+          <button id="ask-button" type="submit">Ask</button>
+        </form>
+
+        <div id="result" class="result" hidden>
+          <p class="question-echo" id="question-echo"></p>
+          <div id="answer" class="answer" aria-live="polite"></div>
+          <p id="timing" class="muted"></p>
+          <h3>Sources</h3>
+          <ol id="sources" class="sources"></ol>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

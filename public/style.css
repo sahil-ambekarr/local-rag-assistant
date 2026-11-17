@@ -1,0 +1,277 @@
+:root {
+  --bg: #f6f7f9;
+  --panel: #ffffff;
+  --text: #1d2330;
+  --muted: #5d6677;
+  --border: #dde1e8;
+  --accent: #2456c9;
+  --accent-soft: #e7eefc;
+  --highlight: #fff4c2;
+  --error: #b42318;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 24px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+h1 {
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1rem;
+  margin: 0 0 12px;
+}
+
+h3 {
+  font-size: 0.9rem;
+  margin: 20px 0 8px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.status {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.model-picker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+select,
+textarea,
+button,
+input[type='file'] {
+  font: inherit;
+}
+
+select {
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--panel);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
+  padding: 20px 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  min-width: 0;
+}
+
+.upload {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.upload input {
+  font-size: 0.85rem;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.error {
+  color: var(--error);
+}
+
+.doc-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  font-size: 0.875rem;
+}
+
+.doc-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.doc-list .name {
+  overflow-wrap: anywhere;
+}
+
+.doc-list .meta {
+  color: var(--muted);
+  white-space: nowrap;
+  font-size: 0.8rem;
+}
+
+.doc-list button {
+  padding: 2px 8px;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+
+.ask {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.ask textarea {
+  flex: 1;
+  resize: vertical;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.question-echo {
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.answer {
+  line-height: 1.6;
+  white-space: pre-wrap;
+  min-height: 1.6em;
+}
+
+.answer.streaming::after {
+  content: '\25CF';
+  color: var(--accent);
+  margin-left: 4px;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+.cite {
+  display: inline-block;
+  padding: 0 5px;
+  margin: 0 1px;
+  font-size: 0.8em;
+  line-height: 1.4;
+  border-radius: 4px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  vertical-align: baseline;
+}
+
+.sources {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.sources li {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  transition: background 0.3s;
+}
+
+.sources li.cited .label::before {
+  content: 'cited';
+  font-size: 0.7rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 4px;
+  padding: 1px 5px;
+  margin-right: 6px;
+}
+
+.sources li.flash {
+  background: var(--highlight);
+}
+
+.sources summary {
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.sources .score {
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-left: 6px;
+}
+
+.sources .excerpt {
+  white-space: pre-wrap;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 8px 0 0;
+}
+
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
