@@ -32,8 +32,11 @@ export function parseFlags(argv: string[]): CliFlags {
   return { mock, write: !mock && !argv.includes('--no-write') };
 }
 
-/** Builds a fresh index of sample-docs/ in a throwaway database. */
-export async function buildIndex(flags: CliFlags): Promise<EvalContext> {
+/**
+ * Indexes sample-docs/ into data/eval.db. With fresh=false an existing index is
+ * reused (unchanged files are skipped), which saves re-embedding on a busy Ollama.
+ */
+export async function buildIndex(flags: CliFlags, fresh = true): Promise<EvalContext> {
   loadDotEnv();
   const env: Record<string, string | undefined> = { ...process.env, LOG_LEVEL: process.env.LOG_LEVEL ?? 'warn' };
   if (flags.mock) env.LLM_PROVIDER = 'mock';
@@ -42,7 +45,7 @@ export async function buildIndex(flags: CliFlags): Promise<EvalContext> {
   const providers = createProviders(config, { logger });
 
   const dbPath = path.join(ROOT, 'data', flags.mock ? 'eval-mock.db' : 'eval.db');
-  for (const suffix of ['', '-wal', '-shm']) fs.rmSync(dbPath + suffix, { force: true });
+  if (fresh) for (const suffix of ['', '-wal', '-shm']) fs.rmSync(dbPath + suffix, { force: true });
   const store = new VectorStore(dbPath);
 
   const started = performance.now();

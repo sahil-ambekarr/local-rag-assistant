@@ -17,7 +17,8 @@ interface SpotItem {
 
 const flags = parseFlags(process.argv.slice(2));
 const { questions } = readJson<{ questions: SpotItem[] }>(path.join(ROOT, 'eval', 'faithfulness-set.json'));
-const ctx = await buildIndex(flags);
+// Reuses the retrieval eval index when present: only the answers are measured here.
+const ctx = await buildIndex(flags, false);
 const model = ctx.providers.chat.defaultModel;
 process.stderr.write(`Indexed ${ctx.chunkCount} chunks; asking ${questions.length} questions with ${model}\n`);
 
