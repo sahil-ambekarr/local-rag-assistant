@@ -13,8 +13,8 @@
   "k": 5,
   "documents": 8,
   "chunks": 70,
-  "ingestMs": 20302,
-  "queryMedianMs": 278,
+  "ingestMs": 10142,
+  "queryMedianMs": 99,
   "chunkLevel": {
     "questions": 28,
     "hitRateAt1": 0.8214285714285714,
