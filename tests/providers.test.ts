@@ -157,13 +157,14 @@ describe('Ollama provider (stubbed HTTP)', () => {
     expect(calls).toBe(2);
   });
 
-  it('lists only chat-capable models and strips :latest', async () => {
+  it('lists only local chat-capable models and strips :latest', async () => {
     const fetchImpl = (async () =>
       json({
         models: [
           { name: 'llama3.2:latest', capabilities: ['completion', 'tools'] },
           { name: 'nomic-embed-text:latest', capabilities: ['embedding'] },
           { name: 'qwen2.5:3b' },
+          { name: 'big-model:cloud', capabilities: ['completion'], remote_host: 'https://ollama.example' },
         ],
       })) as typeof fetch;
     expect(await new OllamaChat(ollamaOpts(fetchImpl)).listModels()).toEqual(['llama3.2', 'qwen2.5:3b']);

@@ -23,6 +23,8 @@ export interface OllamaOptions {
 interface OllamaTag {
   name: string;
   capabilities?: string[];
+  /** Set for Ollama cloud models, which run on a remote host rather than this machine. */
+  remote_host?: string;
 }
 
 const EMBED_BATCH_SIZE = 16;
@@ -43,7 +45,9 @@ async function listTags(opts: OllamaOptions): Promise<OllamaTag[]> {
   return body.models ?? [];
 }
 
+/** Local, text-generating models only: the point of this app is that documents stay on the machine. */
 function isChatModel(tag: OllamaTag): boolean {
+  if (tag.remote_host) return false;
   if (tag.capabilities) return tag.capabilities.includes('completion');
   return !/embed/i.test(tag.name); // older Ollama versions do not report capabilities
 }
