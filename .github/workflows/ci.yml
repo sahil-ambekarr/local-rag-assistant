@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    env:
+      # Mock mode: no Ollama, no GPU and no API key are needed in CI.
+      LLM_PROVIDER: mock
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+
+      - name: Eval smoke run (mock embeddings, writes nothing)
+        run: npm run eval -- --mock
+
+      - name: CLI smoke run (mock provider)
+        run: |
+          npm run ingest -- sample-docs
+          npm run ask -- "How many days of annual leave do I get?"
+        env:
+          DB_PATH: ./data/ci.db

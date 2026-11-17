@@ -1,0 +1,39 @@
+# NOT VERIFIED LOCALLY: Docker was not available on the build machine.
+# Usage:
+#   docker compose up -d
+#   docker compose exec ollama ollama pull llama3.2
+#   docker compose exec ollama ollama pull nomic-embed-text
+#   open http://localhost:4101
+services:
+  ollama:
+    image: ollama/ollama:latest
+    volumes:
+      - ollama-models:/root/.ollama
+    # Uncomment to give Ollama an NVIDIA GPU (needs the NVIDIA container toolkit).
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+  app:
+    build: .
+    depends_on:
+      - ollama
+    ports:
+      - "4101:4101"
+    environment:
+      LLM_PROVIDER: ollama
+      OLLAMA_BASE_URL: http://ollama:11434
+      CHAT_MODEL: llama3.2
+      EMBED_MODEL: nomic-embed-text
+      # The server binds 0.0.0.0 inside the container so the port mapping works.
+      HOST: 0.0.0.0
+    volumes:
+      - rag-data:/data
+
+volumes:
+  ollama-models:
+  rag-data:
