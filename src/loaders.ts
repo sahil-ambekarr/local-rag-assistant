@@ -27,6 +27,23 @@ export function documentTypeFor(filename: string): DocumentType {
   );
 }
 
+/**
+ * PDF text comes back hard-wrapped at the layout width. Lines that do not end a
+ * sentence are re-joined so the chunker sees whole sentences, not fragments.
+ */
+export function unwrapPdfLines(text: string): string {
+  const lines = text
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean);
+  let out = '';
+  for (const line of lines) {
+    if (!out) out = line;
+    else out += /[.!?:]$/.test(out) ? `\n${line}` : ` ${line}`;
+  }
+  return out;
+}
+
 async function loadPdfPages(data: Buffer): Promise<Section[]> {
   // Imported lazily: pdf.js is heavy and only needed when a PDF is ingested.
   const { extractText, getDocumentProxy } = await import('unpdf');
@@ -38,7 +55,7 @@ async function loadPdfPages(data: Buffer): Promise<Section[]> {
     throw new UnsupportedDocumentError(`Could not read PDF: ${err instanceof Error ? err.message : String(err)}`);
   }
   return pages
-    .map((text, i) => ({ text: text.trim(), page: i + 1 }))
+    .map((text, i) => ({ text: unwrapPdfLines(text), page: i + 1 }))
     .filter((section) => section.text.length > 0);
 }
 
