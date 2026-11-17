@@ -11,6 +11,8 @@ export interface AppConfig {
   claudeModel: string;
   anthropicApiKey: string | undefined;
   port: number;
+  /** Interface to bind; 127.0.0.1 keeps the API off the network by default. */
+  host: string;
   dbPath: string;
   chunkSize: number;
   chunkOverlap: number;
@@ -97,6 +99,7 @@ export function loadConfig(env: Env = process.env): AppConfig {
     claudeModel: str(env, 'CLAUDE_MODEL', 'claude-haiku-5-5'),
     anthropicApiKey,
     port: int(env, 'PORT', 4101, 1, 65535),
+    host: str(env, 'HOST', '127.0.0.1'),
     dbPath: str(env, 'DB_PATH', './data/rag.db'),
     chunkSize,
     chunkOverlap,

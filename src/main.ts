@@ -13,7 +13,7 @@ try {
   const { chat, embedder } = createProviders(config, { logger });
   const app = createApp({ config, store, chat, embedder, logger });
 
-  const server = app.listen(config.port, '127.0.0.1', () => {
+  const server = app.listen(config.port, config.host, () => {
     logger.info('server.listening', {
       url: `http://localhost:${config.port}`,
       provider: chat.name,
