@@ -1,0 +1,33 @@
+{
+  "description": "Retrieval eval over sample-docs/. A retrieved chunk is relevant when it comes from expectedSource and contains the evidence phrase (whitespace-insensitive). Questions are paraphrased so they do not simply repeat the document wording.",
+  "questions": [
+    { "id": "q01", "question": "How many vacation days do I get each year?", "expectedSource": "hr-leave-policy.md", "evidence": "24 days of paid annual leave" },
+    { "id": "q02", "question": "How many unused holiday days can roll over into next year?", "expectedSource": "hr-leave-policy.md", "evidence": "Up to 5 unused days can be carried over" },
+    { "id": "q03", "question": "When do I need a doctor's note for being off ill?", "expectedSource": "hr-leave-policy.md", "evidence": "longer than 3 consecutive working days" },
+    { "id": "q04", "question": "How long is the paid leave for the main caregiver after a baby arrives?", "expectedSource": "hr-leave-policy.md", "evidence": "16 weeks of fully paid parental leave" },
+    { "id": "q05", "question": "After how long at the company can I take an unpaid break of a few months?", "expectedSource": "hr-leave-policy.md", "evidence": "After 3 years of continuous service" },
+    { "id": "q06", "question": "How much memory does a developer's computer come with?", "expectedSource": "it-onboarding.md", "evidence": "32 GB of RAM" },
+    { "id": "q07", "question": "What is the minimum length for a login password?", "expectedSource": "it-onboarding.md", "evidence": "at least 14 characters long" },
+    { "id": "q08", "question": "Do I have to connect to the VPN to read my email?", "expectedSource": "it-onboarding.md", "evidence": "Email, chat and the HR portal work without it" },
+    { "id": "q09", "question": "My phone with the authenticator app got lost. What now?", "expectedSource": "it-onboarding.md", "evidence": "call the service desk to have your MFA reset" },
+    { "id": "q10", "question": "What is the deadline for submitting an expense claim after buying something?", "expectedSource": "expense-policy.md", "evidence": "within 30 days of the purchase" },
+    { "id": "q11", "question": "What is the maximum I can spend per night on accommodation?", "expectedSource": "expense-policy.md", "evidence": "nightly hotel limit is 150 EUR" },
+    { "id": "q12", "question": "Will the company pay for a business class ticket?", "expectedSource": "expense-policy.md", "evidence": "Business class is not reimbursed" },
+    { "id": "q13", "question": "How much can I spend on food per day on a work trip?", "expectedSource": "expense-policy.md", "evidence": "daily allowance of 60 EUR" },
+    { "id": "q14", "question": "Is there a budget for buying a desk and chair for working at home?", "expectedSource": "expense-policy.md", "evidence": "home office budget of 400 EUR" },
+    { "id": "q15", "question": "What is the price of the Team plan?", "expectedSource": "product-faq.md", "evidence": "Team costs 6 EUR per user per month" },
+    { "id": "q16", "question": "Can I try the product before paying, and for how long?", "expectedSource": "product-faq.md", "evidence": "14-day trial of the Business plan" },
+    { "id": "q17", "question": "How big can uploaded files be on the free tier?", "expectedSource": "product-faq.md", "evidence": "10 MB per file on the Free plan" },
+    { "id": "q18", "question": "I removed our workspace by mistake. Can it be recovered?", "expectedSource": "product-faq.md", "evidence": "restored by an admin for 30 days" },
+    { "id": "q19", "question": "How many days a year can I work while staying abroad?", "expectedSource": "remote-work-policy.md", "evidence": "up to 20 working days per calendar year" },
+    { "id": "q20", "question": "During which hours should meetings be scheduled?", "expectedSource": "remote-work-policy.md", "evidence": "10:00 to 15:00 local office time" },
+    { "id": "q21", "question": "Does the company contribute to my home broadband bill?", "expectedSource": "remote-work-policy.md", "evidence": "monthly internet allowance of 25 EUR" },
+    { "id": "q22", "question": "What does it cost to replace a lost access card?", "expectedSource": "office-guide.txt", "evidence": "A replacement badge costs 15 EUR" },
+    { "id": "q23", "question": "When is the kitchen refrigerator emptied?", "expectedSource": "office-guide.txt", "evidence": "cleared every Friday at 16:00" },
+    { "id": "q24", "question": "How quickly does support respond when the service is completely down for a Business customer?", "expectedSource": "support-sla.md", "evidence": "within 1 hour for Business customers" },
+    { "id": "q25", "question": "What compensation do we get if availability falls under 99 percent?", "expectedSource": "support-sla.md", "evidence": "Below 99.0 percent, the credit is 25 percent" },
+    { "id": "q26", "question": "How do I flag a suspicious email?", "expectedSource": "security-handbook.pdf", "evidence": "Use the Report Phishing button" },
+    { "id": "q27", "question": "How soon are a leaver's accounts switched off?", "expectedSource": "security-handbook.pdf", "evidence": "all accounts are disabled within 4 hours" },
+    { "id": "q28", "question": "After how long does my screen lock by itself?", "expectedSource": "security-handbook.pdf", "evidence": "after 5 minutes of inactivity" }
+  ]
+}

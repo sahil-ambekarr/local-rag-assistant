@@ -1,0 +1,13 @@
+{
+  "description": "Answer spot check. An answer passes the fact check when every keyword group is matched (any alternative in a group, case-insensitive). It passes the citation check when it cites at least one passage from expectedSource. This is a keyword proxy, not a full claim-by-claim faithfulness judgement.",
+  "questions": [
+    { "id": "f01", "question": "How many vacation days do I get each year?", "expectedSource": "hr-leave-policy.md", "keywords": [["24"]] },
+    { "id": "f02", "question": "When do I need a doctor's note for being off ill?", "expectedSource": "hr-leave-policy.md", "keywords": [["3", "three"], ["day"]] },
+    { "id": "f03", "question": "What is the minimum length for a login password?", "expectedSource": "it-onboarding.md", "keywords": [["14", "fourteen"]] },
+    { "id": "f04", "question": "What is the maximum I can spend per night on accommodation?", "expectedSource": "expense-policy.md", "keywords": [["150"]] },
+    { "id": "f05", "question": "What is the price of the Team plan?", "expectedSource": "product-faq.md", "keywords": [["6 eur", "6 per", "€6", "6€", "eur 6"]] },
+    { "id": "f06", "question": "How many days a year can I work while staying abroad?", "expectedSource": "remote-work-policy.md", "keywords": [["20", "twenty"]] },
+    { "id": "f07", "question": "What does it cost to replace a lost access card?", "expectedSource": "office-guide.txt", "keywords": [["15"]] },
+    { "id": "f08", "question": "How soon are a leaver's accounts switched off?", "expectedSource": "security-handbook.pdf", "keywords": [["4 hours", "four hours"]] }
+  ]
+}
