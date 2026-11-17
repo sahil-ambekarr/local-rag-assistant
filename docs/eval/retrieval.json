@@ -1,0 +1,1112 @@
+{
+  "kind": "retrieval",
+  "date": "2026-11-17",
+  "node": "v24.13.0",
+  "platform": "Windows_NT 10.0.26300",
+  "cpu": "AMD Ryzen 5 5500U with Radeon Graphics",
+  "memoryGb": 15,
+  "note": "CPU-only laptop, AMD integrated graphics, 16 GB RAM, Windows 11. Ollama was shared with other workloads during the run.",
+  "embedProvider": "ollama",
+  "embedModel": "nomic-embed-text",
+  "chunkSize": 800,
+  "chunkOverlap": 120,
+  "k": 5,
+  "documents": 8,
+  "chunks": 70,
+  "ingestMs": 20302,
+  "queryMedianMs": 278,
+  "chunkLevel": {
+    "questions": 28,
+    "hitRateAt1": 0.8214285714285714,
+    "hitRateAt3": 0.8571428571428571,
+    "hitRateAt5": 0.9285714285714286,
+    "mrr": 0.8553571428571428
+  },
+  "sourceLevel": {
+    "questions": 28,
+    "hitRateAt1": 0.8214285714285714,
+    "hitRateAt3": 0.8928571428571429,
+    "hitRateAt5": 0.9642857142857143,
+    "mrr": 0.8672619047619047
+  },
+  "perQuestion": [
+    {
+      "id": "q01",
+      "question": "How many vacation days do I get each year?",
+      "expectedSource": "hr-leave-policy.md",
+      "chunkRank": 2,
+      "sourceRank": 2,
+      "top": [
+        {
+          "source": "remote-work-policy.md",
+          "chunkIndex": 4,
+          "heading": "Remote and Hybrid Work Policy > Working from another country",
+          "score": 0.6873
+        },
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 1,
+          "heading": "Leave Policy > Annual leave",
+          "score": 0.6766
+        },
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 4,
+          "heading": "Leave Policy > Sick leave",
+          "score": 0.6744
+        },
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 2,
+          "heading": "Leave Policy > Annual leave > Carry-over",
+          "score": 0.6481
+        },
+        {
+          "source": "remote-work-policy.md",
+          "chunkIndex": 2,
+          "heading": "Remote and Hybrid Work Policy > Hybrid schedule",
+          "score": 0.6246
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "question": "How many unused holiday days can roll over into next year?",
+      "expectedSource": "hr-leave-policy.md",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 2,
+          "heading": "Leave Policy > Annual leave > Carry-over",
+          "score": 0.7452
+        },
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 4,
+          "heading": "Leave Policy > Sick leave",
+          "score": 0.6602
+        },
+        {
+          "source": "office-guide.txt",
+          "chunkIndex": 3,
+          "score": 0.6553
+        },
+        {
+          "source": "office-guide.txt",
+          "chunkIndex": 2,
+          "score": 0.6444
+        },
+        {
+          "source": "remote-work-policy.md",
+          "chunkIndex": 4,
+          "heading": "Remote and Hybrid Work Policy > Working from another country",
+          "score": 0.6441
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "question": "When do I need a doctor's note for being off ill?",
+      "expectedSource": "hr-leave-policy.md",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 5,
+          "heading": "Leave Policy > Sick leave > Medical certificate",
+          "score": 0.6996
+        },
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 4,
+          "heading": "Leave Policy > Sick leave",
+          "score": 0.6516
+        },
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 2,
+          "heading": "Leave Policy > Annual leave > Carry-over",
+          "score": 0.6154
+        },
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 8,
+          "heading": "Leave Policy > Unpaid leave and sabbaticals",
+          "score": 0.6072
+        },
+        {
+          "source": "remote-work-policy.md",
+          "chunkIndex": 8,
+          "heading": "Remote and Hybrid Work Policy > Ending a remote arrangement",
+          "score": 0.6016
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "question": "How long is the paid leave for the main caregiver after a baby arrives?",
+      "expectedSource": "hr-leave-policy.md",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 6,
+          "heading": "Leave Policy > Parental leave",
+          "score": 0.8332
+        },
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 7,
+          "heading": "Leave Policy > Bereavement leave",
+          "score": 0.7177
+        },
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 4,
+          "heading": "Leave Policy > Sick leave",
+          "score": 0.7051
+        },
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 1,
+          "heading": "Leave Policy > Annual leave",
+          "score": 0.7032
+        },
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 8,
+          "heading": "Leave Policy > Unpaid leave and sabbaticals",
+          "score": 0.6849
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "question": "After how long at the company can I take an unpaid break of a few months?",
+      "expectedSource": "hr-leave-policy.md",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 8,
+          "heading": "Leave Policy > Unpaid leave and sabbaticals",
+          "score": 0.7676
+        },
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 4,
+          "heading": "Leave Policy > Sick leave",
+          "score": 0.7157
+        },
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 1,
+          "heading": "Leave Policy > Annual leave",
+          "score": 0.7007
+        },
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 2,
+          "heading": "Leave Policy > Annual leave > Carry-over",
+          "score": 0.6992
+        },
+        {
+          "source": "remote-work-policy.md",
+          "chunkIndex": 1,
+          "heading": "Remote and Hybrid Work Policy > Who it applies to",
+          "score": 0.6932
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "question": "How much memory does a developer's computer come with?",
+      "expectedSource": "it-onboarding.md",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "it-onboarding.md",
+          "chunkIndex": 1,
+          "heading": "IT Onboarding Guide > Your laptop",
+          "score": 0.7336
+        },
+        {
+          "source": "product-faq.md",
+          "chunkIndex": 6,
+          "heading": "Tidepool Product FAQ > Features > What is the maximum attachment size?",
+          "score": 0.6265
+        },
+        {
+          "source": "it-onboarding.md",
+          "chunkIndex": 8,
+          "heading": "IT Onboarding Guide > Equipment",
+          "score": 0.6206
+        },
+        {
+          "source": "it-onboarding.md",
+          "chunkIndex": 3,
+          "heading": "IT Onboarding Guide > Your laptop > Software installation",
+          "score": 0.6157
+        },
+        {
+          "source": "security-handbook.pdf",
+          "chunkIndex": 0,
+          "page": 1,
+          "score": 0.6132
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "question": "What is the minimum length for a login password?",
+      "expectedSource": "it-onboarding.md",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "it-onboarding.md",
+          "chunkIndex": 5,
+          "heading": "IT Onboarding Guide > Accounts and passwords > Password rules",
+          "score": 0.7345
+        },
+        {
+          "source": "it-onboarding.md",
+          "chunkIndex": 2,
+          "heading": "IT Onboarding Guide > Your laptop > First login",
+          "score": 0.6698
+        },
+        {
+          "source": "product-faq.md",
+          "chunkIndex": 6,
+          "heading": "Tidepool Product FAQ > Features > What is the maximum attachment size?",
+          "score": 0.6215
+        },
+        {
+          "source": "it-onboarding.md",
+          "chunkIndex": 6,
+          "heading": "IT Onboarding Guide > Accounts and passwords > Multi-factor authentication",
+          "score": 0.5987
+        },
+        {
+          "source": "security-handbook.pdf",
+          "chunkIndex": 3,
+          "page": 3,
+          "score": 0.5956
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "question": "Do I have to connect to the VPN to read my email?",
+      "expectedSource": "it-onboarding.md",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "it-onboarding.md",
+          "chunkIndex": 7,
+          "heading": "IT Onboarding Guide > VPN",
+          "score": 0.7526
+        },
+        {
+          "source": "it-onboarding.md",
+          "chunkIndex": 2,
+          "heading": "IT Onboarding Guide > Your laptop > First login",
+          "score": 0.6287
+        },
+        {
+          "source": "remote-work-policy.md",
+          "chunkIndex": 6,
+          "heading": "Remote and Hybrid Work Policy > Workspace requirements",
+          "score": 0.6254
+        },
+        {
+          "source": "security-handbook.pdf",
+          "chunkIndex": 1,
+          "page": 2,
+          "score": 0.6139
+        },
+        {
+          "source": "it-onboarding.md",
+          "chunkIndex": 6,
+          "heading": "IT Onboarding Guide > Accounts and passwords > Multi-factor authentication",
+          "score": 0.6102
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "question": "My phone with the authenticator app got lost. What now?",
+      "expectedSource": "it-onboarding.md",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "it-onboarding.md",
+          "chunkIndex": 6,
+          "heading": "IT Onboarding Guide > Accounts and passwords > Multi-factor authentication",
+          "score": 0.7381
+        },
+        {
+          "source": "it-onboarding.md",
+          "chunkIndex": 9,
+          "heading": "IT Onboarding Guide > Equipment > Lost or stolen devices",
+          "score": 0.6265
+        },
+        {
+          "source": "office-guide.txt",
+          "chunkIndex": 3,
+          "score": 0.5874
+        },
+        {
+          "source": "it-onboarding.md",
+          "chunkIndex": 10,
+          "heading": "IT Onboarding Guide > Returning equipment",
+          "score": 0.575
+        },
+        {
+          "source": "security-handbook.pdf",
+          "chunkIndex": 2,
+          "page": 2,
+          "score": 0.5552
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "question": "What is the deadline for submitting an expense claim after buying something?",
+      "expectedSource": "expense-policy.md",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "expense-policy.md",
+          "chunkIndex": 1,
+          "heading": "Expense Policy > Submitting a claim",
+          "score": 0.8258
+        },
+        {
+          "source": "expense-policy.md",
+          "chunkIndex": 2,
+          "heading": "Expense Policy > Submitting a claim > Receipts",
+          "score": 0.7218
+        },
+        {
+          "source": "expense-policy.md",
+          "chunkIndex": 3,
+          "heading": "Expense Policy > Submitting a claim > Approvals",
+          "score": 0.7011
+        },
+        {
+          "source": "it-onboarding.md",
+          "chunkIndex": 10,
+          "heading": "IT Onboarding Guide > Returning equipment",
+          "score": 0.661
+        },
+        {
+          "source": "office-guide.txt",
+          "chunkIndex": 3,
+          "score": 0.6501
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "question": "What is the maximum I can spend per night on accommodation?",
+      "expectedSource": "expense-policy.md",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "expense-policy.md",
+          "chunkIndex": 6,
+          "heading": "Expense Policy > Travel > Hotels",
+          "score": 0.7893
+        },
+        {
+          "source": "expense-policy.md",
+          "chunkIndex": 8,
+          "heading": "Expense Policy > Meals",
+          "score": 0.6899
+        },
+        {
+          "source": "office-guide.txt",
+          "chunkIndex": 1,
+          "score": 0.6148
+        },
+        {
+          "source": "expense-policy.md",
+          "chunkIndex": 9,
+          "heading": "Expense Policy > Home office",
+          "score": 0.613
+        },
+        {
+          "source": "expense-policy.md",
+          "chunkIndex": 5,
+          "heading": "Expense Policy > Travel > Flights",
+          "score": 0.6127
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "question": "Will the company pay for a business class ticket?",
+      "expectedSource": "expense-policy.md",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "expense-policy.md",
+          "chunkIndex": 5,
+          "heading": "Expense Policy > Travel > Flights",
+          "score": 0.7236
+        },
+        {
+          "source": "expense-policy.md",
+          "chunkIndex": 4,
+          "heading": "Expense Policy > Travel",
+          "score": 0.6445
+        },
+        {
+          "source": "expense-policy.md",
+          "chunkIndex": 7,
+          "heading": "Expense Policy > Travel > Ground transport",
+          "score": 0.6356
+        },
+        {
+          "source": "expense-policy.md",
+          "chunkIndex": 0,
+          "heading": "Expense Policy",
+          "score": 0.6185
+        },
+        {
+          "source": "product-faq.md",
+          "chunkIndex": 2,
+          "heading": "Tidepool Product FAQ > Plans and pricing > Is there a free trial?",
+          "score": 0.6144
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "question": "How much can I spend on food per day on a work trip?",
+      "expectedSource": "expense-policy.md",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "expense-policy.md",
+          "chunkIndex": 8,
+          "heading": "Expense Policy > Meals",
+          "score": 0.7298
+        },
+        {
+          "source": "expense-policy.md",
+          "chunkIndex": 9,
+          "heading": "Expense Policy > Home office",
+          "score": 0.6718
+        },
+        {
+          "source": "expense-policy.md",
+          "chunkIndex": 6,
+          "heading": "Expense Policy > Travel > Hotels",
+          "score": 0.6498
+        },
+        {
+          "source": "expense-policy.md",
+          "chunkIndex": 5,
+          "heading": "Expense Policy > Travel > Flights",
+          "score": 0.6419
+        },
+        {
+          "source": "remote-work-policy.md",
+          "chunkIndex": 4,
+          "heading": "Remote and Hybrid Work Policy > Working from another country",
+          "score": 0.6229
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "question": "Is there a budget for buying a desk and chair for working at home?",
+      "expectedSource": "expense-policy.md",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "expense-policy.md",
+          "chunkIndex": 9,
+          "heading": "Expense Policy > Home office",
+          "score": 0.788
+        },
+        {
+          "source": "remote-work-policy.md",
+          "chunkIndex": 6,
+          "heading": "Remote and Hybrid Work Policy > Workspace requirements",
+          "score": 0.6372
+        },
+        {
+          "source": "it-onboarding.md",
+          "chunkIndex": 8,
+          "heading": "IT Onboarding Guide > Equipment",
+          "score": 0.617
+        },
+        {
+          "source": "office-guide.txt",
+          "chunkIndex": 1,
+          "score": 0.6102
+        },
+        {
+          "source": "remote-work-policy.md",
+          "chunkIndex": 7,
+          "heading": "Remote and Hybrid Work Policy > Internet allowance",
+          "score": 0.5874
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "question": "What is the price of the Team plan?",
+      "expectedSource": "product-faq.md",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "product-faq.md",
+          "chunkIndex": 1,
+          "heading": "Tidepool Product FAQ > Plans and pricing > What plans are available?",
+          "score": 0.6254
+        },
+        {
+          "source": "product-faq.md",
+          "chunkIndex": 3,
+          "heading": "Tidepool Product FAQ > Plans and pricing > Do you offer discounts?",
+          "score": 0.6179
+        },
+        {
+          "source": "support-sla.md",
+          "chunkIndex": 1,
+          "heading": "Customer Support and Service Levels > Support channels",
+          "score": 0.5627
+        },
+        {
+          "source": "product-faq.md",
+          "chunkIndex": 2,
+          "heading": "Tidepool Product FAQ > Plans and pricing > Is there a free trial?",
+          "score": 0.5589
+        },
+        {
+          "source": "expense-policy.md",
+          "chunkIndex": 0,
+          "heading": "Expense Policy",
+          "score": 0.5514
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "question": "Can I try the product before paying, and for how long?",
+      "expectedSource": "product-faq.md",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "product-faq.md",
+          "chunkIndex": 2,
+          "heading": "Tidepool Product FAQ > Plans and pricing > Is there a free trial?",
+          "score": 0.7018
+        },
+        {
+          "source": "office-guide.txt",
+          "chunkIndex": 1,
+          "score": 0.6274
+        },
+        {
+          "source": "it-onboarding.md",
+          "chunkIndex": 8,
+          "heading": "IT Onboarding Guide > Equipment",
+          "score": 0.624
+        },
+        {
+          "source": "expense-policy.md",
+          "chunkIndex": 1,
+          "heading": "Expense Policy > Submitting a claim",
+          "score": 0.6129
+        },
+        {
+          "source": "security-handbook.pdf",
+          "chunkIndex": 3,
+          "page": 3,
+          "score": 0.6021
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "question": "How big can uploaded files be on the free tier?",
+      "expectedSource": "product-faq.md",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "product-faq.md",
+          "chunkIndex": 6,
+          "heading": "Tidepool Product FAQ > Features > What is the maximum attachment size?",
+          "score": 0.6997
+        },
+        {
+          "source": "product-faq.md",
+          "chunkIndex": 1,
+          "heading": "Tidepool Product FAQ > Plans and pricing > What plans are available?",
+          "score": 0.5668
+        },
+        {
+          "source": "product-faq.md",
+          "chunkIndex": 9,
+          "heading": "Tidepool Product FAQ > Data and security > Can I export my data?",
+          "score": 0.5599
+        },
+        {
+          "source": "product-faq.md",
+          "chunkIndex": 2,
+          "heading": "Tidepool Product FAQ > Plans and pricing > Is there a free trial?",
+          "score": 0.5598
+        },
+        {
+          "source": "product-faq.md",
+          "chunkIndex": 4,
+          "heading": "Tidepool Product FAQ > Features > Can I import tasks from a spreadsheet?",
+          "score": 0.5503
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "question": "I removed our workspace by mistake. Can it be recovered?",
+      "expectedSource": "product-faq.md",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "product-faq.md",
+          "chunkIndex": 10,
+          "heading": "Tidepool Product FAQ > Data and security > What happens when I delete my workspace?",
+          "score": 0.7463
+        },
+        {
+          "source": "product-faq.md",
+          "chunkIndex": 8,
+          "heading": "Tidepool Product FAQ > Data and security > Where is my data stored?",
+          "score": 0.6318
+        },
+        {
+          "source": "product-faq.md",
+          "chunkIndex": 9,
+          "heading": "Tidepool Product FAQ > Data and security > Can I export my data?",
+          "score": 0.604
+        },
+        {
+          "source": "office-guide.txt",
+          "chunkIndex": 3,
+          "score": 0.5993
+        },
+        {
+          "source": "remote-work-policy.md",
+          "chunkIndex": 6,
+          "heading": "Remote and Hybrid Work Policy > Workspace requirements",
+          "score": 0.5924
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "question": "How many days a year can I work while staying abroad?",
+      "expectedSource": "remote-work-policy.md",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "remote-work-policy.md",
+          "chunkIndex": 4,
+          "heading": "Remote and Hybrid Work Policy > Working from another country",
+          "score": 0.8389
+        },
+        {
+          "source": "remote-work-policy.md",
+          "chunkIndex": 2,
+          "heading": "Remote and Hybrid Work Policy > Hybrid schedule",
+          "score": 0.7016
+        },
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 1,
+          "heading": "Leave Policy > Annual leave",
+          "score": 0.6964
+        },
+        {
+          "source": "remote-work-policy.md",
+          "chunkIndex": 1,
+          "heading": "Remote and Hybrid Work Policy > Who it applies to",
+          "score": 0.6959
+        },
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 4,
+          "heading": "Leave Policy > Sick leave",
+          "score": 0.6919
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "question": "During which hours should meetings be scheduled?",
+      "expectedSource": "remote-work-policy.md",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "remote-work-policy.md",
+          "chunkIndex": 3,
+          "heading": "Remote and Hybrid Work Policy > Core hours",
+          "score": 0.7488
+        },
+        {
+          "source": "office-guide.txt",
+          "chunkIndex": 1,
+          "score": 0.7308
+        },
+        {
+          "source": "support-sla.md",
+          "chunkIndex": 2,
+          "heading": "Customer Support and Service Levels > Support hours",
+          "score": 0.6655
+        },
+        {
+          "source": "remote-work-policy.md",
+          "chunkIndex": 2,
+          "heading": "Remote and Hybrid Work Policy > Hybrid schedule",
+          "score": 0.6495
+        },
+        {
+          "source": "office-guide.txt",
+          "chunkIndex": 0,
+          "score": 0.6494
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "question": "Does the company contribute to my home broadband bill?",
+      "expectedSource": "remote-work-policy.md",
+      "chunkRank": 4,
+      "sourceRank": 4,
+      "top": [
+        {
+          "source": "expense-policy.md",
+          "chunkIndex": 9,
+          "heading": "Expense Policy > Home office",
+          "score": 0.6137
+        },
+        {
+          "source": "expense-policy.md",
+          "chunkIndex": 0,
+          "heading": "Expense Policy",
+          "score": 0.6105
+        },
+        {
+          "source": "support-sla.md",
+          "chunkIndex": 7,
+          "heading": "Customer Support and Service Levels > Service credits",
+          "score": 0.6072
+        },
+        {
+          "source": "remote-work-policy.md",
+          "chunkIndex": 7,
+          "heading": "Remote and Hybrid Work Policy > Internet allowance",
+          "score": 0.5959
+        },
+        {
+          "source": "product-faq.md",
+          "chunkIndex": 3,
+          "heading": "Tidepool Product FAQ > Plans and pricing > Do you offer discounts?",
+          "score": 0.5934
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "question": "What does it cost to replace a lost access card?",
+      "expectedSource": "office-guide.txt",
+      "chunkRank": 5,
+      "sourceRank": 5,
+      "top": [
+        {
+          "source": "expense-policy.md",
+          "chunkIndex": 2,
+          "heading": "Expense Policy > Submitting a claim > Receipts",
+          "score": 0.6321
+        },
+        {
+          "source": "security-handbook.pdf",
+          "chunkIndex": 3,
+          "page": 3,
+          "score": 0.5872
+        },
+        {
+          "source": "it-onboarding.md",
+          "chunkIndex": 6,
+          "heading": "IT Onboarding Guide > Accounts and passwords > Multi-factor authentication",
+          "score": 0.5803
+        },
+        {
+          "source": "it-onboarding.md",
+          "chunkIndex": 9,
+          "heading": "IT Onboarding Guide > Equipment > Lost or stolen devices",
+          "score": 0.5746
+        },
+        {
+          "source": "office-guide.txt",
+          "chunkIndex": 0,
+          "score": 0.5737
+        }
+      ]
+    },
+    {
+      "id": "q23",
+      "question": "When is the kitchen refrigerator emptied?",
+      "expectedSource": "office-guide.txt",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "office-guide.txt",
+          "chunkIndex": 2,
+          "score": 0.6438
+        },
+        {
+          "source": "office-guide.txt",
+          "chunkIndex": 3,
+          "score": 0.6095
+        },
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 2,
+          "heading": "Leave Policy > Annual leave > Carry-over",
+          "score": 0.5972
+        },
+        {
+          "source": "product-faq.md",
+          "chunkIndex": 10,
+          "heading": "Tidepool Product FAQ > Data and security > What happens when I delete my workspace?",
+          "score": 0.5883
+        },
+        {
+          "source": "it-onboarding.md",
+          "chunkIndex": 10,
+          "heading": "IT Onboarding Guide > Returning equipment",
+          "score": 0.5788
+        }
+      ]
+    },
+    {
+      "id": "q24",
+      "question": "How quickly does support respond when the service is completely down for a Business customer?",
+      "expectedSource": "support-sla.md",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "support-sla.md",
+          "chunkIndex": 3,
+          "heading": "Customer Support and Service Levels > Priority levels > Priority 1",
+          "score": 0.7753
+        },
+        {
+          "source": "support-sla.md",
+          "chunkIndex": 4,
+          "heading": "Customer Support and Service Levels > Priority levels > Priority 2",
+          "score": 0.7534
+        },
+        {
+          "source": "support-sla.md",
+          "chunkIndex": 5,
+          "heading": "Customer Support and Service Levels > Priority levels > Priority 3",
+          "score": 0.7266
+        },
+        {
+          "source": "support-sla.md",
+          "chunkIndex": 2,
+          "heading": "Customer Support and Service Levels > Support hours",
+          "score": 0.6988
+        },
+        {
+          "source": "support-sla.md",
+          "chunkIndex": 6,
+          "heading": "Customer Support and Service Levels > Uptime commitment",
+          "score": 0.687
+        }
+      ]
+    },
+    {
+      "id": "q25",
+      "question": "What compensation do we get if availability falls under 99 percent?",
+      "expectedSource": "support-sla.md",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "support-sla.md",
+          "chunkIndex": 7,
+          "heading": "Customer Support and Service Levels > Service credits",
+          "score": 0.6815
+        },
+        {
+          "source": "remote-work-policy.md",
+          "chunkIndex": 7,
+          "heading": "Remote and Hybrid Work Policy > Internet allowance",
+          "score": 0.6666
+        },
+        {
+          "source": "support-sla.md",
+          "chunkIndex": 6,
+          "heading": "Customer Support and Service Levels > Uptime commitment",
+          "score": 0.6425
+        },
+        {
+          "source": "remote-work-policy.md",
+          "chunkIndex": 5,
+          "heading": "Remote and Hybrid Work Policy > Fully remote roles",
+          "score": 0.6276
+        },
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 1,
+          "heading": "Leave Policy > Annual leave",
+          "score": 0.6067
+        }
+      ]
+    },
+    {
+      "id": "q26",
+      "question": "How do I flag a suspicious email?",
+      "expectedSource": "security-handbook.pdf",
+      "chunkRank": 1,
+      "sourceRank": 1,
+      "top": [
+        {
+          "source": "security-handbook.pdf",
+          "chunkIndex": 1,
+          "page": 2,
+          "score": 0.7416
+        },
+        {
+          "source": "it-onboarding.md",
+          "chunkIndex": 6,
+          "heading": "IT Onboarding Guide > Accounts and passwords > Multi-factor authentication",
+          "score": 0.6154
+        },
+        {
+          "source": "security-handbook.pdf",
+          "chunkIndex": 2,
+          "page": 2,
+          "score": 0.6108
+        },
+        {
+          "source": "it-onboarding.md",
+          "chunkIndex": 9,
+          "heading": "IT Onboarding Guide > Equipment > Lost or stolen devices",
+          "score": 0.5891
+        },
+        {
+          "source": "security-handbook.pdf",
+          "chunkIndex": 0,
+          "page": 1,
+          "score": 0.586
+        }
+      ]
+    },
+    {
+      "id": "q27",
+      "question": "How soon are a leaver's accounts switched off?",
+      "expectedSource": "security-handbook.pdf",
+      "chunkRank": null,
+      "sourceRank": null,
+      "top": [
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 2,
+          "heading": "Leave Policy > Annual leave > Carry-over",
+          "score": 0.7056
+        },
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 8,
+          "heading": "Leave Policy > Unpaid leave and sabbaticals",
+          "score": 0.6887
+        },
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 1,
+          "heading": "Leave Policy > Annual leave",
+          "score": 0.6853
+        },
+        {
+          "source": "hr-leave-policy.md",
+          "chunkIndex": 4,
+          "heading": "Leave Policy > Sick leave",
+          "score": 0.6679
+        },
+        {
+          "source": "remote-work-policy.md",
+          "chunkIndex": 8,
+          "heading": "Remote and Hybrid Work Policy > Ending a remote arrangement",
+          "score": 0.6666
+        }
+      ]
+    },
+    {
+      "id": "q28",
+      "question": "After how long does my screen lock by itself?",
+      "expectedSource": "security-handbook.pdf",
+      "chunkRank": null,
+      "sourceRank": 3,
+      "top": [
+        {
+          "source": "it-onboarding.md",
+          "chunkIndex": 2,
+          "heading": "IT Onboarding Guide > Your laptop > First login",
+          "score": 0.6378
+        },
+        {
+          "source": "it-onboarding.md",
+          "chunkIndex": 9,
+          "heading": "IT Onboarding Guide > Equipment > Lost or stolen devices",
+          "score": 0.6181
+        },
+        {
+          "source": "security-handbook.pdf",
+          "chunkIndex": 4,
+          "page": 3,
+          "score": 0.6128
+        },
+        {
+          "source": "security-handbook.pdf",
+          "chunkIndex": 3,
+          "page": 3,
+          "score": 0.5995
+        },
+        {
+          "source": "office-guide.txt",
+          "chunkIndex": 3,
+          "score": 0.5827
+        }
+      ]
+    }
+  ]
+}
